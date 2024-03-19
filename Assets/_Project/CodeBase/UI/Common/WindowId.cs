@@ -9,5 +9,7 @@ namespace _Project.CodeBase.UI.Common
         public string Settings;
         public string NewGame;
         public string LoadGame;
+        public string GameUI;
+        public string Inventory;
     }
 }

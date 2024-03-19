@@ -82,8 +82,43 @@ MonoBehaviour:
   _windowPrefabs:
   - {fileID: 7241566576004476515, guid: 7fe77ed7a95b72346bb7e0473000c36e, type: 3}
   - {fileID: 7322197147479906132, guid: bfc538cacb5c6454c952d8f3aab2f7cb, type: 3}
+  - {fileID: 8862224367800529874, guid: 3de86469ef4b6fb45a4bc3203f91d8ce, type: 3}
+  - {fileID: 124780235838397715, guid: 64811ba5506531d41a1db345885c9d00, type: 3}
   _buildingPrefabs:
   - {fileID: 5299018654580075828, guid: d5e65271bd0f5554fbbf5f98b62d787e, type: 3}
+  - {fileID: 5330932355865516315, guid: b45ebff60c42f01499d550cabc215693, type: 3}
+  - {fileID: 6063872693297261181, guid: 8db37cec8d4bb7445817f52d13ecc68f, type: 3}
+  - {fileID: 5801239060227504122, guid: ee631ad70033fee45a17622705d686b2, type: 3}
+  _resources:
+  - mode: 0
+    unityReference: {fileID: 11400000, guid: 0bf93cf67aa5f2943827b2ffea600eee, type: 2}
+    rawReference:
+      rid: -2
+  - mode: 0
+    unityReference: {fileID: 11400000, guid: 695e7378aa8f0ee43ad324cbdb58e527, type: 2}
+    rawReference:
+      rid: -2
+  - mode: 0
+    unityReference: {fileID: 11400000, guid: f1ac5a6240686d14d910f7d0a4e97bcf, type: 2}
+    rawReference:
+      rid: -2
+  - mode: 0
+    unityReference: {fileID: 11400000, guid: 20cd78ebab1d7ac448bfd2e97e29bdd5, type: 2}
+    rawReference:
+      rid: -2
+  - mode: 0
+    unityReference: {fileID: 11400000, guid: 79c4a9e168343ff41b94a3d6a5e8269d, type: 2}
+    rawReference:
+      rid: -2
+  - mode: 0
+    unityReference: {fileID: 11400000, guid: 0affb7177587d9c488a014db17b7b89d, type: 2}
+    rawReference:
+      rid: -2
+  references:
+    version: 2
+    RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }
 --- !u!114 &-8678796090544811267
 MonoBehaviour:
   m_ObjectHideFlags: 0

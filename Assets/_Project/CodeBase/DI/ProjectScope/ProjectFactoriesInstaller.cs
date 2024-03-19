@@ -1,4 +1,5 @@
 ﻿using _Project.CodeBase.Factories;
+using _Project.CodeBase.GameFlow.Inventory.Interfaces;
 using _Project.CodeBase.UI.Interfaces;
 using Zenject;
 using IFactories = _Project.CodeBase.Factories.Interfaces;

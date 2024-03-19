@@ -1,4 +1,4 @@
-﻿using _Project.CodeBase.Factories.Interfaces;
+﻿using IFactories = _Project.CodeBase.Factories.Interfaces;
 using _Project.CodeBase.GameFlow.Buildings.Interfaces;
 using _Project.CodeBase.GameFlow.Map;
 using _Project.CodeBase.GameFlow.Map.Common;
@@ -10,16 +10,16 @@ using Zenject;
 
 namespace _Project.CodeBase.Factories
 {
-    public class MapFactory : IFactory<IMap, string>
+    public class MapFactory : IFactories.IFactory<IMap, string>
     {
         private readonly IMap _map;
         private readonly MapConfig _mapConfig;
         private readonly ILoader _loader;
-        private readonly IFactory<IBuilding, string, Vector3, Quaternion> _buildingFactory;
+        private readonly IFactories.IFactory<IBuilding, string, Vector3, Quaternion> _buildingFactory;
 
         public MapFactory(IMap map, MapConfig mapConfig,
             [InjectOptional(Id = SaveMethod.Json)] ILoader loader,
-            IFactory<IBuilding, string, Vector3, Quaternion> buildingFactory)
+            IFactories.IFactory<IBuilding, string, Vector3, Quaternion> buildingFactory)
         {
             _map = map;
             _mapConfig = mapConfig;

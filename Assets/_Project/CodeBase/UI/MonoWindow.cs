@@ -5,16 +5,15 @@ namespace _Project.CodeBase.UI
 {
     public class MonoWindow : MonoEntity, IWindow
     {
-
         [SerializeField] private string _id;
         public string GetId() => _id;
         
-        public void Show()
+        public virtual void Show()
         {
             gameObject.SetActive(true);
         }
 
-        public void Hide()
+        public virtual void Hide()
         {
             gameObject.SetActive(false);
         }

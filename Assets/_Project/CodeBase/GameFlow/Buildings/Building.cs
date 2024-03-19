@@ -12,17 +12,19 @@ namespace _Project.CodeBase.GameFlow.Buildings
     public class Building : MonoBehaviour, IBuilding
     {
         public string Id => _id;
-        public IResource[] Cost
+        public string Name => _name;
+
+        public Dictionary<IResource, int> Cost
         {
             get
             {
-                List<IResource> resources = new();
-                foreach (SerializableInterface<IResource> resource in _buildingCost)
+                Dictionary<IResource, int> resources = new();
+                foreach (var resource in _buildingCost)
                 {
-                    resources.Add(resource.Value);
+                    resources.Add(resource.Key.Value, resource.Value);
                 }
 
-                return resources.ToArray();
+                return resources;
             }
         }
         public Dictionary<IResource, int> UpgradeCost
@@ -57,7 +59,8 @@ namespace _Project.CodeBase.GameFlow.Buildings
         public float ProductionRate => _productionRate;
 
         [SerializeField] private string _id;
-        [SerializeField] private SerializableInterface<IResource>[] _buildingCost;
+        [SerializeField] private string _name;
+        [SerializeField] private GenericDictionary<SerializableInterface<IResource>, int> _buildingCost;
         [SerializeField] private SerializableInterface<IResource> _product;
         [SerializeField] private SerializableInterface<IResource>[] _productCost;
         [SerializeField] private float _productionRate;
@@ -90,6 +93,7 @@ namespace _Project.CodeBase.GameFlow.Buildings
 
         private void Update()
         {
+            if (_product.Value == null) return;
             if (!_canProduce) return;
             
             _timeSinceLastProduct += Time.deltaTime;

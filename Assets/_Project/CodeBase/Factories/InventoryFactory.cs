@@ -1,4 +1,4 @@
-﻿using _Project.CodeBase.Factories.Interfaces;
+﻿using IFactories = _Project.CodeBase.Factories.Interfaces;
 using _Project.CodeBase.GameFlow.Inventory;
 using _Project.CodeBase.GameFlow.Inventory.Interfaces;
 using _Project.CodeBase.Services.Saving.Common;
@@ -7,7 +7,7 @@ using Zenject;
 
 namespace _Project.CodeBase.Factories
 {
-    public class InventoryFactory : IFactory<IInventory, string>
+    public class InventoryFactory : IFactories.IFactory<IInventory, string>
     {
         private readonly ILoader _loader;
         private readonly IInventory _inventory;
@@ -35,6 +35,7 @@ namespace _Project.CodeBase.Factories
         private IInventory CreateNewInventory()
         {
             _inventory.Copy(new Inventory());
+            _inventory.AddResource("cash_usd", 100);
             return _inventory;
         }
     }

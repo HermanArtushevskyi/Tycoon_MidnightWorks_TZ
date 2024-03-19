@@ -7,7 +7,8 @@ namespace _Project.CodeBase.GameFlow.Buildings.Interfaces
     public interface IBuilding : IUpgradable
     {
         public string Id { get; }
-        public IResource[] Cost { get; }
+        public string Name { get; }
+        public Dictionary<IResource, int> Cost { get; }
         public IResource ProducingResource { get; }
         public IResource[] ProducingCost { get; }
         public float ProductionRate { get; }

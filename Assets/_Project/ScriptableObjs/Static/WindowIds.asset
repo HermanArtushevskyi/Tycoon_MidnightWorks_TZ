@@ -16,3 +16,5 @@ MonoBehaviour:
   Settings: Settings
   NewGame: NewGame
   LoadGame: LoadGame
+  GameUI: GameUI
+  Inventory: Inventory

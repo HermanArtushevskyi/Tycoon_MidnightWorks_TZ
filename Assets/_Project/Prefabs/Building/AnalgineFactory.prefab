@@ -45,7 +45,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _id: building_analginFactory
-  _buildingCost: []
+  _buildingCost:
+    list:
+    - Key:
+        mode: 0
+        unityReference: {fileID: 11400000, guid: 79c4a9e168343ff41b94a3d6a5e8269d,
+          type: 2}
+        rawReference:
+          rid: -2
+      Value: 1000
+    keyCollision: 0
   _product:
     mode: 0
     unityReference: {fileID: 11400000, guid: 0bf93cf67aa5f2943827b2ffea600eee, type: 2}

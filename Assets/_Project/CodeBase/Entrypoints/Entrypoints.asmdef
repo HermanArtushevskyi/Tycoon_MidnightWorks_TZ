@@ -1,3 +1,25 @@
 {
-	"name": "Entrypoints"
+    "name": "Entrypoints",
+    "rootNamespace": "",
+    "references": [
+        "GUID:0d8beb7f090555447a6cf5ce9e54dbb4",
+        "GUID:0f3ab21e2fd793249b86778518d81768",
+        "GUID:aed5df9b63a8358418a361e76a01a2a1",
+        "GUID:afad5873945168a48ad5d7c9a821484a",
+        "GUID:f3d19052988c13f4c8d13a7f337f60b4",
+        "GUID:deb2776ddbee6964e97d28655462abe1",
+        "GUID:67a91a5bd5b1e434b9c8ffdc2ce3987b",
+        "GUID:3e22a6409c55ed343b393c25a509881d",
+        "GUID:5a25d6587ce777346a35a8ebfb9038d0",
+        "GUID:dd0c7fe0f9124f948b5c038c682858fb"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
 }

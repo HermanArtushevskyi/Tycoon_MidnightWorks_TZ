@@ -1,0 +1,17 @@
+{
+    "name": "Map.Interfaces",
+    "rootNamespace": "",
+    "references": [
+        "GUID:ee86166b84e9155419cb8b4f4696b6fb",
+        "GUID:3e22a6409c55ed343b393c25a509881d"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

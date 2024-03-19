@@ -1,3 +1,37 @@
 {
-	"name": "DI"
+    "name": "DI",
+    "rootNamespace": "",
+    "references": [
+        "GUID:a887143f9d76b5a4a886868622bba8d6",
+        "GUID:aed5df9b63a8358418a361e76a01a2a1",
+        "GUID:5dda6abd39bc93b4db5994abfc2dce44",
+        "GUID:5a25d6587ce777346a35a8ebfb9038d0",
+        "GUID:dd0c7fe0f9124f948b5c038c682858fb",
+        "GUID:874ca9d2924492d43959f2e465cc95bf",
+        "GUID:deb2776ddbee6964e97d28655462abe1",
+        "GUID:0852febe5a08bdb418b1ff44a2b2e4bb",
+        "GUID:afad5873945168a48ad5d7c9a821484a",
+        "GUID:f3d19052988c13f4c8d13a7f337f60b4",
+        "GUID:f3ccdad5aa60d7b44b35951041a36f4e",
+        "GUID:3e22a6409c55ed343b393c25a509881d",
+        "GUID:fbf18298e204f7a4788b0513e40cfb96",
+        "GUID:ee86166b84e9155419cb8b4f4696b6fb",
+        "GUID:67a91a5bd5b1e434b9c8ffdc2ce3987b",
+        "GUID:1d54ace752df92649a0aadec334d2e5c",
+        "GUID:65013db8523952a4e9bf69bf9affdc6e",
+        "GUID:6d89ec8d46cdd0d47b5ef0fb37185d47",
+        "GUID:a5e8d7bad99cc9049b65b29b514d89b1",
+        "GUID:0d8beb7f090555447a6cf5ce9e54dbb4",
+        "GUID:324caed91501a9c47a04ebfd87b68794",
+        "GUID:23eed6c2401dca1419d1ebd180e58c5a"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
 }

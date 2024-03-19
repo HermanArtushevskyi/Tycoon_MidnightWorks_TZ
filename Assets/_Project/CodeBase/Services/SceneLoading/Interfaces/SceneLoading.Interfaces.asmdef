@@ -1,0 +1,17 @@
+{
+    "name": "SceneLoading.Interfaces",
+    "rootNamespace": "",
+    "references": [
+        "GUID:0f3ab21e2fd793249b86778518d81768",
+        "GUID:f51ebe6a0ceec4240a699833d6309b23"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

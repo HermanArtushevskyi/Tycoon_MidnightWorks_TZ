@@ -1,3 +1,16 @@
 {
-	"name": "GameResources"
+    "name": "GameResources",
+    "rootNamespace": "",
+    "references": [
+        "GUID:65013db8523952a4e9bf69bf9affdc6e"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
 }

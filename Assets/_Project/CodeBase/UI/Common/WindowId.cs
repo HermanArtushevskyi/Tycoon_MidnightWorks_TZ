@@ -6,10 +6,11 @@ namespace _Project.CodeBase.UI.Common
     public class WindowId : ScriptableObject
     {
         public string MainMenu;
-        public string Settings;
         public string NewGame;
         public string LoadGame;
         public string GameUI;
         public string Inventory;
+        public string BuyBuilding;
+        public string BuildingInfo;
     }
 }

@@ -1,0 +1,16 @@
+{
+    "name": "Market.Interfaces",
+    "rootNamespace": "",
+    "references": [
+        "GUID:f56bbc985a82bb64d8799cc624f9da22"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

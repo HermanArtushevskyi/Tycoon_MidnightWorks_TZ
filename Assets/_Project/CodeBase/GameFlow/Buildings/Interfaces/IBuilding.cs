@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using _Project.CodeBase.GameFlow.GameResources.Interfaces;
+using UnityEngine;
 
 namespace _Project.CodeBase.GameFlow.Buildings.Interfaces
 {
@@ -8,6 +9,7 @@ namespace _Project.CodeBase.GameFlow.Buildings.Interfaces
     {
         public string Id { get; }
         public string Name { get; }
+        public GameObject GameObject { get; }
         public Dictionary<IResource, int> Cost { get; }
         public IResource ProducingResource { get; }
         public IResource[] ProducingCost { get; }
@@ -25,7 +27,8 @@ namespace _Project.CodeBase.GameFlow.Buildings.Interfaces
         /// (Building that was upgraded, New building)
         /// </summary>
         public event Action<IBuilding, IBuilding> Upgraded;
-        
+
+        public IBuilding NextBuilding { get; }
         public bool CanBeUpgraded { get; }
         public void Upgrade();
     }

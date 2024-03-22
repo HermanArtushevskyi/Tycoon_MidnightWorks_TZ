@@ -13,8 +13,8 @@ namespace _Project.CodeBase.Services.Saving
             Config = config;
         }
 
-        public abstract bool Load<T>(out T result, string saveName = null);
+        public abstract bool Load<T>(out T result, string saveName = null) where T : class;
 
-        public abstract bool Save(object data);
+        public abstract bool Save<T>(object data, string saveName = null);
     }
 }

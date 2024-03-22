@@ -2,6 +2,6 @@
 {
     public interface ISaver
     {
-        public bool Save(object data);
+        public bool Save<T>(object data, string saveName = null);
     }
 }

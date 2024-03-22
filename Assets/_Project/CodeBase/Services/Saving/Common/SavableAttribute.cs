@@ -2,7 +2,7 @@
 
 namespace _Project.CodeBase.Services.Saving.Common
 {
-    [AttributeUsage(AttributeTargets.Class | AttributeTargets.Struct)]
+    [AttributeUsage(AttributeTargets.Class | AttributeTargets.Struct | AttributeTargets.Interface)]
     public class SavableAttribute : Attribute
     {
         public readonly string Key;

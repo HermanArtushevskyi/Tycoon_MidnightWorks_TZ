@@ -6,7 +6,7 @@ namespace _Project.CodeBase.UI
 {
     public abstract class MonoEntity : MonoBehaviour, IUIEntity
     {
-        public event Action<IUIEntity> OnDestroy;
+        public event Action<IUIEntity> OnGameObjectDestroy;
         public GameObject GameObject => gameObject;
         public object EntityData { get; protected set; }
         public void SetData(object data)
@@ -16,8 +16,13 @@ namespace _Project.CodeBase.UI
 
         public void DestroyEntity()
         {
-            OnDestroy?.Invoke(this);
+            OnGameObjectDestroy?.Invoke(this);
             Destroy(gameObject);
+        }
+        
+        private void OnDestroy()
+        {
+            OnGameObjectDestroy?.Invoke(this);
         }
     }
 }

@@ -48,14 +48,14 @@ namespace _Project.CodeBase.Factories
 
         private IMap LoadExistingMap(string saveName)
         {
-            _loader.Load(out Map map, saveName);
+            _loader.Load<IMap>(out IMap map, saveName);
             _map.Copy(map);
 
             for (int x = 0; x < _map.Hexes.GetLength(0); x++)
             {
                 for (int y = 0; y < _map.Hexes.GetLength(1); y++)
                 {
-                    _buildingFactory.Create(_map.Hexes[x,y].Building.Id, new Vector3(x, 0, y), Quaternion.identity);
+                    _map.GetHex(x, y).Building = _buildingFactory.Create(_map.Hexes[x,y].Building.Id, new Vector3(x, 0, y), Quaternion.identity);
                 }
             }
             

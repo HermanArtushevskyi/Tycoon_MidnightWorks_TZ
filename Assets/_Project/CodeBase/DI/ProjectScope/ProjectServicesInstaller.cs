@@ -1,14 +1,18 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using _Project.CodeBase.Common;
 using _Project.CodeBase.Factories;
 using _Project.CodeBase.GameFlow.Buildings.Interfaces;
 using _Project.CodeBase.GameFlow.GameResources.Interfaces;
+using _Project.CodeBase.GameFlow.Inventory.Interfaces;
 using _Project.CodeBase.GameFlow.Map;
 using _Project.CodeBase.GameFlow.Map.Common;
 using _Project.CodeBase.GameFlow.Map.Interfaces;
+using _Project.CodeBase.GameFlow.Market.Common;
 using _Project.CodeBase.Services.Saving;
 using _Project.CodeBase.Services.Saving.Common;
 using _Project.CodeBase.Services.Saving.Interfaces;
+using _Project.CodeBase.Services.Saving.Middlewares;
 using _Project.CodeBase.Services.SceneLoading;
 using _Project.CodeBase.Services.SceneLoading.Interfaces;
 using _Project.CodeBase.UI;
@@ -26,6 +30,8 @@ namespace _Project.CodeBase.DI.ProjectScope
     {
         [Group("tabs"), Tab("Configs"), SerializeField] private SavingConfig _saving;
         [Group("tabs"), Tab("Configs"), SerializeField] private MapConfig _mapConfig;
+        [Group("tabs"), Tab("Configs"), SerializeField] private MarketConfig _marketConfig;
+        [Group("tabs"), Tab("Configs"), SerializeField] private AutoSaverConfig _autoSaverConfig;
         [Group("tabs"), Tab("Static"), SerializeField] private WindowId _windowId;
         [Group("tabs"), Tab("Static"), SerializeField] private GameObject[] _windowPrefabs;
         [Group("tabs"), Tab("Static"), SerializeField] private GameObject[] _buildingPrefabs;
@@ -53,7 +59,19 @@ namespace _Project.CodeBase.DI.ProjectScope
             BindUI();
             BindBuildingPrefabs();
             BindMapConfig();
+            BindMarketConfig();
             BindResources();
+            BindGameInfo();
+        }
+
+        private void BindGameInfo()
+        {
+            Container.Bind<GameInfo>().To<GameInfo>().AsSingle();
+        }
+
+        private void BindMarketConfig()
+        {
+            Container.Bind<MarketConfig>().FromInstance(_marketConfig).AsSingle();
         }
 
         private void BindResources()
@@ -82,11 +100,15 @@ namespace _Project.CodeBase.DI.ProjectScope
         {
             Container.Bind<SavingConfig>().FromInstance(_saving).AsSingle();
             Container.Bind(typeof(ISaver), typeof(ILoader)).WithId(SaveMethod.Json).To<JsonSaver>().AsCached();
+            Container.Bind<IMiddleware>().WithId(typeof(IMap)).To<MapMiddleware>().AsCached();
+            Container.Bind<IMiddleware>().WithId(typeof(IInventory)).To<InventoryMiddleware>().AsCached();
+            Container.Bind<IMiddleware>().WithId(SaveMethod.Json).To<JsonMiddleware>().AsCached();
         }
 
         private void BindSceneLoader()
         {
             Container.Bind<ISceneLoader>().To<SceneLoader>().AsSingle();
+            Container.Bind<AutoSaverConfig>().FromInstance(_autoSaverConfig).AsSingle();
         }
     }
 }

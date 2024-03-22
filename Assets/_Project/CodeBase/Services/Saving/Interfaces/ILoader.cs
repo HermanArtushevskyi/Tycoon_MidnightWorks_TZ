@@ -2,6 +2,6 @@
 {
     public interface ILoader
     {
-        public bool Load<T>(out T result, string saveName = null);
+        public bool Load<T>(out T result, string saveName = null) where T : class;
     }
 }

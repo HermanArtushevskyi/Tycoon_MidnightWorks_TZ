@@ -13,6 +13,7 @@ namespace _Project.CodeBase.GameFlow.Buildings
     {
         public string Id => _id;
         public string Name => _name;
+        public GameObject GameObject => gameObject;
 
         public Dictionary<IResource, int> Cost
         {
@@ -41,6 +42,7 @@ namespace _Project.CodeBase.GameFlow.Buildings
             }
         }
         public event Action<IBuilding, IBuilding> Upgraded;
+        public IBuilding NextBuilding => _upgradeBuilding.GetComponent<IBuilding>();
         public bool CanBeUpgraded => _upgradeBuilding != null;
         public IResource ProducingResource => _product.Value;
         public IResource[] ProducingCost
@@ -69,12 +71,12 @@ namespace _Project.CodeBase.GameFlow.Buildings
         
         private bool _canProduce = true;
         private float _timeSinceLastProduct;
-        private IInventory _inventory;
+        protected IInventory Inventory;
 
         [Inject]
         private void GetDependencies(IInventory inventory)
         {
-            _inventory = inventory;
+            Inventory = inventory;
         }
         
         public void Upgrade()
@@ -84,6 +86,7 @@ namespace _Project.CodeBase.GameFlow.Buildings
 
         public void Remove()
         {
+            _canProduce = false;
             Destroy(gameObject);
         }
 
@@ -101,7 +104,7 @@ namespace _Project.CodeBase.GameFlow.Buildings
             {
                 foreach (SerializableInterface<IResource> resource in _productCost)
                 {
-                    if (_inventory.GetAmount(resource.Value.Id) <= 0)
+                    if (Inventory.GetAmount(resource.Value.Id) <= 0)
                     {
                         return;
                     }
@@ -114,11 +117,11 @@ namespace _Project.CodeBase.GameFlow.Buildings
 
         private void Produce()
         {
-            _inventory.AddResource(_product.Value.Id, 1);
+            Inventory.AddResource(_product.Value.Id, 1);
 
             foreach (SerializableInterface<IResource> resource in _productCost)
             {
-                _inventory.RemoveResource(resource.Value.Id, 1);
+                Inventory.RemoveResource(resource.Value.Id, 1);
             }
         }
     }

@@ -5,7 +5,7 @@ namespace _Project.CodeBase.GameFlow.Map.Interfaces
     public interface IHex
     {
         public bool IsEmpty { get; }
-        public IBuilding Building { get; }
+        public IBuilding Building { get; set; }
         public void SetBuilding(IBuilding building);
         public void RemoveBuilding();
     }

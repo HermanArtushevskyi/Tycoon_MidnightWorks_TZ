@@ -1,8 +1,12 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using _Project.CodeBase.GameFlow.Inventory.Interfaces;
+using _Project.CodeBase.Services.Saving.Common;
 
 namespace _Project.CodeBase.GameFlow.Inventory
 {
+    [Serializable]
+    [Savable(nameof(Inventory))]
     public class Inventory : IInventory
     {
         private Dictionary<string, int> _inventory = new();

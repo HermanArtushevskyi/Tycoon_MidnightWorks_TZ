@@ -3,6 +3,7 @@
     public enum SceneId
     {
         Boot,
-        MainMenu
+        MainMenu,
+        GameScene
     }
 }

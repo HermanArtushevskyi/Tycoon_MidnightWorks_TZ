@@ -17,5 +17,6 @@ namespace _Project.CodeBase.UI
         {
             gameObject.SetActive(false);
         }
+        
     }
 }

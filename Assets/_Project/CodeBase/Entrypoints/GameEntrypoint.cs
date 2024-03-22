@@ -1,4 +1,5 @@
-﻿using _Project.CodeBase.GameFlow.Inventory.Interfaces;
+﻿using _Project.CodeBase.Common;
+using _Project.CodeBase.GameFlow.Inventory.Interfaces;
 using _Project.CodeBase.GameFlow.Map.Interfaces;
 using _Project.CodeBase.UI.Common;
 using _Project.CodeBase.UI.Interfaces;
@@ -13,25 +14,37 @@ namespace _Project.CodeBase.Entrypoints
         private Factories.Interfaces.IFactory<IInventory, string> _inventoryFactory;
         private IWindowsManager _windowsManager;
         private WindowId _windowId;
+        private GameInfo _gameInfo;
 
         [Inject]
         private void GetDependencies(
             Factories.Interfaces.IFactory<IMap, string> mapFactory,
             Factories.Interfaces.IFactory<IInventory, string> inventoryFactory,
             IWindowsManager windowsManager,
-            WindowId windowId)
+            WindowId windowId,
+            GameInfo gameInfo)
         {
             _mapFactory = mapFactory;
             _inventoryFactory = inventoryFactory;
             _windowsManager = windowsManager;
             _windowId = windowId;
+            _gameInfo = gameInfo;
         }
         
         private void Start()
         {
-            _inventoryFactory.Create(null);
+            if (_gameInfo.IsLoadedGame == false)
+            {
+                _inventoryFactory.Create(null);
+                _mapFactory.Create(null);
+            }
+            else
+            {
+                _inventoryFactory.Create(_gameInfo.GameName);
+                _mapFactory.Create(_gameInfo.GameName);
+            }
+
             _windowsManager.ShowWindow(_windowId.GameUI);
-            IMap map = _mapFactory.Create(null);
         }
     }
 }

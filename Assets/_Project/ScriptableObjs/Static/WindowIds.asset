@@ -18,3 +18,5 @@ MonoBehaviour:
   LoadGame: LoadGame
   GameUI: GameUI
   Inventory: Inventory
+  BuyBuilding: BuyBuilding
+  BuildingInfo: BuildingInfo

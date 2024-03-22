@@ -2,7 +2,7 @@
     "name": "Entrypoints",
     "rootNamespace": "",
     "references": [
-        "GUID:0d8beb7f090555447a6cf5ce9e54dbb4",
+        "GUID:0cd0b8b2938be9b458523e806fa3031e",
         "GUID:0f3ab21e2fd793249b86778518d81768",
         "GUID:aed5df9b63a8358418a361e76a01a2a1",
         "GUID:afad5873945168a48ad5d7c9a821484a",
@@ -12,7 +12,8 @@
         "GUID:3e22a6409c55ed343b393c25a509881d",
         "GUID:5a25d6587ce777346a35a8ebfb9038d0",
         "GUID:dd0c7fe0f9124f948b5c038c682858fb",
-        "GUID:a5e8d7bad99cc9049b65b29b514d89b1"
+        "GUID:a5e8d7bad99cc9049b65b29b514d89b1",
+        "GUID:0d8beb7f090555447a6cf5ce9e54dbb4"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

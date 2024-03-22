@@ -27,14 +27,14 @@ namespace _Project.CodeBase.Factories
             IWindow window = GameObject.Instantiate(_windowPrefabs[windowId]).GetComponent<MonoWindow>();
             
             _spawnedWindows.Add(windowId, window);
-            _spawnedWindows[windowId].OnDestroy += OnWindowDestroyed;
+            _spawnedWindows[windowId].OnGameObjectDestroy += OnGameObjectWindowDestroyed;
             return window;
         }
 
-        private void OnWindowDestroyed(IUIEntity entity)
+        private void OnGameObjectWindowDestroyed(IUIEntity entity)
         {
             IWindow window = entity as IWindow;
-            window.OnDestroy -= OnWindowDestroyed;
+            window.OnGameObjectDestroy -= OnGameObjectWindowDestroyed;
             _spawnedWindows.Remove(window.GetId());
         }
     }

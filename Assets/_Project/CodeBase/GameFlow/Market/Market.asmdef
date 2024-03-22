@@ -1,0 +1,20 @@
+{
+    "name": "Market",
+    "rootNamespace": "",
+    "references": [
+        "GUID:6d60a37efe8c1d24d8d2e9ca21059be6",
+        "GUID:f56bbc985a82bb64d8799cc624f9da22",
+        "GUID:a5e8d7bad99cc9049b65b29b514d89b1",
+        "GUID:65013db8523952a4e9bf69bf9affdc6e",
+        "GUID:2674aeb60707a1841943d1518a7d1bcc"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

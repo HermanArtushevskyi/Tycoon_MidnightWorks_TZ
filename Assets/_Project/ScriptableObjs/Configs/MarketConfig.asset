@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8a77e81006b458686b4f279c70447ff, type: 3}
+  m_Name: MarketConfig
+  m_EditorClassIdentifier: 
+  MaxPercentDeviation: 0.5
+  DeviationTime: 5
+  cashResourceId: cash_usd
+  _prices:
+    list:
+    - Key:
+        mode: 0
+        unityReference: {fileID: 11400000, guid: 0bf93cf67aa5f2943827b2ffea600eee,
+          type: 2}
+        rawReference:
+          rid: -2
+      Value: 10
+    - Key:
+        mode: 0
+        unityReference: {fileID: 11400000, guid: 695e7378aa8f0ee43ad324cbdb58e527,
+          type: 2}
+        rawReference:
+          rid: -2
+      Value: 5
+    - Key:
+        mode: 0
+        unityReference: {fileID: 11400000, guid: f1ac5a6240686d14d910f7d0a4e97bcf,
+          type: 2}
+        rawReference:
+          rid: -2
+      Value: 2
+    - Key:
+        mode: 0
+        unityReference: {fileID: 11400000, guid: 20cd78ebab1d7ac448bfd2e97e29bdd5,
+          type: 2}
+        rawReference:
+          rid: -2
+      Value: 2
+    - Key:
+        mode: 0
+        unityReference: {fileID: 11400000, guid: 0affb7177587d9c488a014db17b7b89d,
+          type: 2}
+        rawReference:
+          rid: -2
+      Value: 15
+    keyCollision: 0
+  references:
+    version: 2
+    RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }

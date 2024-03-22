@@ -22,7 +22,9 @@ namespace _Project.CodeBase.Factories
         public IBuilding Create(string buildingName, Vector3 position, Quaternion rotation)
         {
             var prefab = _buildingPrefabs[buildingName];
-            var building = _container.InstantiatePrefab(prefab,position, rotation, null).GetComponent<IBuilding>();
+            var buildingGO = _container.InstantiatePrefab(prefab, position, rotation, null);
+            var building = buildingGO.GetComponent<IBuilding>();
+            
             return building;
         }
     }

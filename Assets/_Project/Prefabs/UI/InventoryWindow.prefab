@@ -909,6 +909,7 @@ GameObject:
   - component: {fileID: 6801699835770727511}
   - component: {fileID: 8993330632469856654}
   - component: {fileID: 1447850030078203023}
+  - component: {fileID: 3830412940464175414}
   m_Layer: 0
   m_Name: CloseButton
   m_TagString: Untagged
@@ -991,6 +992,10 @@ MonoBehaviour:
     unityReference: {fileID: 1447850030078203023}
     rawReference:
       rid: -2
+  - mode: 0
+    unityReference: {fileID: 3830412940464175414}
+    rawReference:
+      rid: -2
   _onEnterReactions: []
   _onExitReactions: []
   _onDownReactions: []
@@ -1013,3 +1018,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _windowId: Inventory
+--- !u!114 &3830412940464175414
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8999885918674880049}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f017b6f90cd24a82ac5e7b338ca3a577, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _windowId: GameUI

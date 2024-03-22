@@ -15,14 +15,15 @@ namespace _Project.CodeBase.UI
             _windowsFactory = windowsFactory;
         }
 
-        public void ShowWindow(string windowId)
+        public void ShowWindow(string windowId, object data = null)
         {
             if (!_windows.ContainsKey(windowId))
             {
                 _windows[windowId] = _windowsFactory.Create(windowId);
-                _windows[windowId].OnDestroy += OnWindowDestroy;
+                _windows[windowId].OnGameObjectDestroy += OnGameObjectWindowDestroy;
             }
             
+            _windows[windowId].SetData(data);
             _windows[windowId].Show();
         }
 
@@ -34,9 +35,9 @@ namespace _Project.CodeBase.UI
             }
         }
 
-        private void OnWindowDestroy(IUIEntity obj)
+        private void OnGameObjectWindowDestroy(IUIEntity obj)
         {
-            obj.OnDestroy -= OnWindowDestroy;
+            obj.OnGameObjectDestroy -= OnGameObjectWindowDestroy;
             _windows.Remove((obj as IWindow).GetId());
         }
     }

@@ -27,7 +27,7 @@ namespace _Project.CodeBase.Factories
 
         private IInventory LoadExistingInventory(string saveName)
         {
-            _loader.Load(out Inventory inventory, saveName);
+            _loader.Load<IInventory>(out IInventory inventory, saveName);
             _inventory.Copy(inventory);
             return _inventory;
         }
@@ -35,7 +35,7 @@ namespace _Project.CodeBase.Factories
         private IInventory CreateNewInventory()
         {
             _inventory.Copy(new Inventory());
-            _inventory.AddResource("cash_usd", 100);
+            _inventory.AddResource("cash_usd", 200);
             return _inventory;
         }
     }

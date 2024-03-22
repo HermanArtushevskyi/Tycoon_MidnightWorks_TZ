@@ -55,7 +55,7 @@ namespace _Project.CodeBase.Services.Saving
         private string GetFilePath(string saveName, SavableAttribute savableAttribute)
         {
             string filePath;
-            filePath = saveName == null ? Config.savePath + savableAttribute.Key : Config.savePath + savableAttribute.Key + saveName;
+            filePath = saveName == null ? Config.SavePath + savableAttribute.Key : Config.SavePath + savableAttribute.Key + saveName;
             return filePath;
         }
     }
